@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".DetalleContacto">
+
+    <include android:id="@+id/miActionBar"
+        layout="@layout/actionbar"/>
+
+    <TextView
+        android:padding="@dimen/margins_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNombre"
+        android:text="@string/nombre"
+        android:textStyle="bold"
+        android:textSize="@dimen/nombre_contacto">
+
+    </TextView>
+    <LinearLayout
+        android:padding="@dimen/margins_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:onClick="llamar"
+        android:layout_marginTop="@dimen/top">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="100dp"
+            android:id="@+id/imgvTelefono"
+            android:src="@drawable/phone">
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTelefono"
+            android:text="@string/telefono"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/telefono_contacto"
+            android:layout_marginLeft="@dimen/left"
+            tools:ignore="MissingConstraints">
+        </TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:padding="@dimen/margins_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:onClick="enviarMail"
+        android:layout_marginTop="@dimen/top">
+        <ImageView
+            android:minWidth="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/message"
+            android:src="@drawable/msg">
+        </ImageView>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEmail"
+            android:text="@string/email"
+            android:layout_marginLeft="@dimen/left"
+            android:textSize="@dimen/telefono_contacto"
+            tools:ignore="MissingConstraints">
+        </TextView>
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
